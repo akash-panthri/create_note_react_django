@@ -9,6 +9,12 @@ function Form({ route, method }) {
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+    const name = method === "login" ? "Login" : "Register";
 
-    return <form></form>
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+    return <form onSubmit={handleSubmit}>
+         <h1>{name}</h1>
+    </form>
 }
