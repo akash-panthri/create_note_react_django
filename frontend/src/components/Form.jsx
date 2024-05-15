@@ -11,8 +11,16 @@ function Form({ route, method }) {
     const navigate = useNavigate();
     const name = method === "login" ? "Login" : "Register";
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
+        setLoading(true);
         e.preventDefault();
+        try {
+            
+        } catch (error) {
+            alert(error)
+        } finally{
+            setLoading(false)
+        }
     }
     return <form onSubmit={handleSubmit}>
          <h1>{name}</h1>
@@ -30,5 +38,8 @@ function Form({ route, method }) {
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Password"
             />
+            <button className="form-button" type="submit">
+                {name}
+            </button>
     </form>
 }
