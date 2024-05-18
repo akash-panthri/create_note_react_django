@@ -17,5 +17,15 @@ export default function Home() {
       })
       .catch((error) => alert(error));
   };
+  const deleteNote = (id) => {
+    api
+        .delete(`/api/notes/delete/${id}/`)
+        .then((res) => {
+            if (res.status === 204) alert("Note deleted!");
+            else alert("Failed to delete note.");
+            getNotes();
+        })
+        .catch((error) => alert(error));
+};
   return <div>Home</div>;
 }
