@@ -38,5 +38,9 @@ const createNote = (e) => {
       })
       .catch((err) => alert(err));
 };
-  return <div>Home</div>;
+  return <div><div>
+  <h2>Notes</h2>
+  
+</div>
+<h2>Create a Note</h2></div>;
 }
