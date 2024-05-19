@@ -44,7 +44,16 @@ const createNote = (e) => {
 </div>
 <h2>Create a Note</h2>
 <form onSubmit={createNote}>
-
+<label htmlFor="title">Title:</label>
+                <br />
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    required
+                    onChange={(e) => setTitle(e.target.value)}
+                    value={title}
+                />
 </form>
 </div>;
 }
