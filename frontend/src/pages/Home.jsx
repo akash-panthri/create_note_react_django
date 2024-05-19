@@ -42,5 +42,9 @@ const createNote = (e) => {
   <h2>Notes</h2>
   
 </div>
-<h2>Create a Note</h2></div>;
+<h2>Create a Note</h2>
+<form onSubmit={createNote}>
+
+</form>
+</div>;
 }
